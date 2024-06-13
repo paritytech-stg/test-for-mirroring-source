@@ -85,7 +85,7 @@ jobs:
           FORKED_REPO: ${{ github.repository }}
           UPSTREAM_REPO: ${{ steps.get_repo_params.outputs.upstream_name }}
           BRANCH: ${{ github.ref_name }}
-          FORK_REF: $${{ github.sha }} 
+          FORK_REF: ${{ github.sha }} 
         run: |
           UPSTREAM_TIP=$(gh api --method GET \
             -H "Accept: application/vnd.github+json" \
